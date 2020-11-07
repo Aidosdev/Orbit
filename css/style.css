@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+}
+
+body {
+	background: url(../img/universe.jpg) no-repeat;
+	background-size: cover;
+}
+
+.orbita {
+	width: 50%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.earth {
+	width: 700px;
+	padding: 100px;
+	position: relative;
+	z-index: 1;
+}
+
+.moon {
+	width: 200px;
+	position: absolute;
+	left: 250px;
+	top: 250px;
+	animation: linear 2s orbita infinite;
+}
+
+@keyframes orbita {
+	0% {
+		width: 100px;
+	}
+	24% {
+		z-index: 0;
+	}
+	25% {
+		left: 550px; top: 120px; z-index: 2;
+	}
+	50% {
+		 width: 170px;
+	}
+	74% {
+		z-index: 2;
+	}
+	75% {
+		top: 450px; left: 10px; z-index: 0; 
+	}
+	100% {
+		width: 100px; transform: rotate(360deg);
+	}
+}
